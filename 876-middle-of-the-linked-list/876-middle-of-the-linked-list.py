@@ -1,7 +1,10 @@
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
-        arr = [head]
+        slow=head
+        fast=head
+        while fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
 
-        while arr[-1].next:
-            arr.append(arr[-1].next)
-        return arr[len(arr) // 2]
+        return slow
+            
