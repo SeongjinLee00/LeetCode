@@ -13,7 +13,6 @@ class Solution:
             if ends[n-1]>0:
                 ends[n-1]-=1
                 ends[n]+=1
-            
             elif frequency[n+1] and frequency[n+2]:
                 ends[n+2]+=1
                 frequency[n+1]-=1
