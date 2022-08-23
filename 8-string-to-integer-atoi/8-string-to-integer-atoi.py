@@ -9,13 +9,12 @@ class Solution:
         for c in arr[0]:
             if not flag and (c=='+' or c=='-'):
                 tmp+=c
-                flag=1
             elif c.isnumeric():
                 tmp+=c
-                flag=1
             else:
                 break         
-        
+            flag=1
+            
         try:
             if int(float(tmp))>=(2**31): return 2**31-1
             if int(float(tmp))<-(2**31): return -(2**31)
