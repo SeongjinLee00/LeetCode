@@ -16,8 +16,8 @@ class Solution:
             flag=1
             
         try:
-            if int(float(tmp))>=(2**31): return 2**31-1
-            if int(float(tmp))<-(2**31): return -(2**31)
+            if int(tmp)>=(2**31): return 2**31-1
+            if int(tmp)<-(2**31): return -(2**31)
             return int(tmp)
         except:
             return 0
