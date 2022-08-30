@@ -18,6 +18,6 @@ class Solution:
         try:
             if int(float(tmp))>=(2**31): return 2**31-1
             if int(float(tmp))<-(2**31): return -(2**31)
-            return int(float(tmp))
+            return int(tmp)
         except:
             return 0
