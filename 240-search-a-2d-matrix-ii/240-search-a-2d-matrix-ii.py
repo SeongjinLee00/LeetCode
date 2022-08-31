@@ -3,15 +3,9 @@ class Solution:
         n=len(matrix)
         m=len(matrix[0])
         
-        r=n-1
-        c=0
-        
-        while True:
-            if matrix[r][c]>target:
-                r-=1
-            elif matrix[r][c]<target:
-                c+=1
-            else:
-                return True
-            if r==-1 or c==m:
-                return False
+        for i in range(n):
+            for j in range(m):
+                if matrix[i][j]==target:
+                    return True
+                
+        return False
