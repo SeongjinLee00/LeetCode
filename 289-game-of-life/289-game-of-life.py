@@ -5,12 +5,6 @@ class Solution:
         
         if r==1 and c==1:
             board[0][0]=0
-        if r==1 and c==2:
-            board[0][0]=0
-            board[0][1]=0
-        if r==2 and c==1:
-            board[0][0]=0
-            board[1][0]=0
             
         d=defaultdict(int)
         
