@@ -1,19 +1,20 @@
 class Solution:
     def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:
-        N=len(queries[0])
         
-        ret=[]
+        def match(word1, word2):
+            count = 0
+            for w1, w2 in zip(word1, word2):
+                if w1 != w2:
+                    count += 1
+                if count > 2:
+                    return False
+            return True
         
-        for word1 in queries:
-            for word2 in dictionary:
-                difference=0
-                
-                for i in range(N):
-                    if word1[i]!=word2[i]:
-                        difference+=1
-                
-                if difference<=2:
-                    ret.append(word1)
+        res = []
+        for query in queries:
+            for ele in dictionary:
+                if match(query, ele):
+                    res.append(query)
                     break
         
-        return ret
+        return res
