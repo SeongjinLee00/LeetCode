@@ -11,7 +11,7 @@ class Solution:
         ans=-1
         ret=[]
         while q:
-            path,idx=q.popleft()
+            path,idx=q.pop()
             if len(path)>ans:
                 ans=len(path)
                 ret=path
